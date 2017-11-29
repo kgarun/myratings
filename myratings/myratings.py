@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Displays the Rating Summary of the User from various CP Sites.
     Mode 1:
         In this mode user handles and ratings are stored in the disk so that
