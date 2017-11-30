@@ -27,7 +27,7 @@ test_requirements = [
 
 setup(
     name='myratings',
-    version='0.1.0',
+    version='0.1.1',
     description="Displays ratings of the user from various competitive programming sites in the terminal !!",
     long_description=readme + '\n\n' + history,
     author="Arun KG",

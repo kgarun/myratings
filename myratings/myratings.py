@@ -82,6 +82,7 @@ def getRatings():
     """
 
     rating = []
+    userHandleError = []
 
     with open('handle/log.txt', 'r') as log:
         for line in log:
@@ -90,19 +91,26 @@ def getRatings():
                 userId, oldRating, newRating = None, None, None
                 with open('handle/' + site + '.txt', 'r') as siteHandle:
                     for info in siteHandle:
-                        userId, oldRating = info.split(
-                            " ")  # Obtaining UserId and Ratings
+                        userId, oldRating = info.split(" ")  # Obtaining UserId and Ratings
 
                 reqUrl = url[site] + userId  # Constructing Request URL
-                newRating = obtainRatings(
-                    site, reqUrl)  # Obtaining Latest Rating
-                rating.append([site, oldRating, newRating])
+                newRating = obtainRatings(site, reqUrl)  # Obtaining Latest Rating
+                if(newRating == "NA"):
+                    userHandleError.append(site)
+                else:
+                    rating.append([site, oldRating, newRating])
 
                 if newRating != "NA":  # Updating LogFile
                     if oldRating == "NA" or int(oldRating) != int(newRating):
-                        with open('handle/' + site + '.txt',
-                                  'w') as siteHandle:
+                        with open('handle/' + site + '.txt','w') as siteHandle:
                             siteHandle.write(userId + " " + str(newRating))
+
+    if len(userHandleError) > 0:
+        print("\nPlease enter correct user handle of the following site(s):")
+        for errhandle in userHandleError:
+            print("   ==> "+errhandle)        
+
+        print("\nUse following command to config handle:\n myratings config\n\n")
 
     return rating
 
@@ -113,7 +121,7 @@ def printRatingSummary(ratings):
         rating =  a list of lists(site,oldrating,newrating)
     """
 
-    print("     Site       OldRating   NewRating  Changes")
+    print("\n     Site       OldRating   NewRating  Changes")
 
     for rating in ratings:
         site = rating[0]
@@ -166,6 +174,14 @@ def onlineRatings():
 
 def main():
     """ Main function of the Module. """
+
+    args = os.sys.argv
+
+    if len(args) > 1:
+        if args[1].lower() == "config":
+            configure() # Calls method that configure user handle
+        else:
+            print("Usage:\n myratings (or) \n myratings config ")
 
     if manageLog() is True:  # Mode 1
         ratings = getRatings()

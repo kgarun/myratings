@@ -25,6 +25,6 @@ def obtainRating(url):
             raise Exception("Rating not Found!!")
         return str(rating)
     except Exception as e:
-        print("Cannot Obtain Ratings From CodeForces")
-        print("Reason :" + str(e))
+        #print("Cannot Obtain Ratings From CodeForces")
+        #print("Reason :" + str(e))
         return rating
