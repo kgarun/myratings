@@ -8,7 +8,7 @@ def obtainRating(url):
     Returns:
         Actual ratings if successfully retrieved, NA otherwise
     """
-    soup = scrape.getSoup(url)
+    soup = getSoup(url)
     rating = "NA"
 
     try:
