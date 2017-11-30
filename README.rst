@@ -39,19 +39,20 @@ Features
         ratings by simply selecting competitive programming site option number
         and entering handle.
        
+Installation 
+-------------
+Type the following command in the terminal::
+
+ pip install myratings
+
+
+
 Usage
 -----
 
 .. image:: https://user-images.githubusercontent.com/21175650/33433330-1523cdf8-d5d3-11e7-865d-8bb9526cfa0b.png
      :alt: Demo
 
-
-Installation::
-
-* pip install myratings
-
-
-To get ratings::
 
 * Type "myratings" from the commandline
 * First time it asks for user handle of the respective sites
