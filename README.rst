@@ -42,6 +42,10 @@ Features
 Usage
 -----
 
+.. image:: https://user-images.githubusercontent.com/21175650/33433330-1523cdf8-d5d3-11e7-865d-8bb9526cfa0b.png
+     :alt: Demo
+
+
 Installation::
 
 * pip install myratings
