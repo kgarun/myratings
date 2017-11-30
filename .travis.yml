@@ -21,7 +21,7 @@ deploy:
       TDc4dDUxaThSMGNpRVlvcVpzVjZCSXF1UWZRYzUyRU94aVoyZkVzMkREWXhJblFxZlliVVhsMHlj
       MDc2UTZJVU1DMVNWYUNTa3F6V3pjeTJRdEphWW1ML1JXV2liZmJIRDV2ZWtWYjMvQ3NyT2EyQm5C
       QTk4V292eFVXeWwxRjFIWFhpWC9NVnFzL3NIYWg2L1laam43RE13YnQ4S1QwM0FJeXI0R2VpWjg9
-install: pip install setuptools && pip install --pre -U tox
+install: pip install -U tox-travis
 language: python
 python:
 - 3.5
