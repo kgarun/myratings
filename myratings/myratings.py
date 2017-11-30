@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Displays the Rating Summary of the User from various CP Sites.
     Mode 1:
         In this mode user handles and ratings are stored in the disk so that
@@ -13,7 +12,7 @@
 import os
 import errno
 import fileinput
-import judges
+from .judges import *
 
 
 def manageLog():
@@ -31,7 +30,7 @@ def manageLog():
 
             with open('handle/log.txt',
                       'w') as log:  # Creating and Initializing Log File
-                for judge in judges.judgesList:
+                for judge in judgesList:
                     log.write(judge + " " + "0\n")
 
         except OSError as e:
@@ -46,7 +45,7 @@ def manageLog():
                 print(str(e))
             return False
 
-    for judge in judges.judgesList:  # Creating Log file for each judge
+    for judge in judgesList:  # Creating Log file for each judge
         filename = judge + '.txt'
         filepath = "handle/" + filename
         if not os.path.exists(filepath):
@@ -62,7 +61,7 @@ def configure():
     """Helps to set the Userid and Judge Preferences.
     """
 
-    for judge in judges.judgesList:
+    for judge in judgesList:
         print("Do you want to add " + judge + "?? (y/n) ", end="")
         response = input()
         if response.lower() == "y":
@@ -86,8 +85,7 @@ def getRatings():
 
     with open('handle/log.txt', 'r') as log:
         for line in log:
-            site, preference = line[:-1].split(
-                " ")  # Splitting Site and Preference
+            site, preference = line[:-1].split(" ")# Splitting Site and Preference
             if preference == "1":
                 userId, oldRating, newRating = None, None, None
                 with open('handle/' + site + '.txt', 'r') as siteHandle:
@@ -95,8 +93,8 @@ def getRatings():
                         userId, oldRating = info.split(
                             " ")  # Obtaining UserId and Ratings
 
-                reqUrl = judges.url[site] + userId  # Constructing Request URL
-                newRating = judges.obtainRatings(
+                reqUrl = url[site] + userId  # Constructing Request URL
+                newRating = obtainRatings(
                     site, reqUrl)  # Obtaining Latest Rating
                 rating.append([site, oldRating, newRating])
 
@@ -140,7 +138,7 @@ def onlineRatings():
     counter = 1
     ptr = None
     print("Please Select one of the following options")
-    for judge in judges.judgesList:
+    for judge in judgesList:
         print(str(counter) + " ==> " + judge)
         counter += 1
 
@@ -153,13 +151,13 @@ def onlineRatings():
             if ptr < 1 or ptr >= counter:  # Doesnt fit in the limit
                 raise Exception("Quitting....")
             else:
-                site = judges.judgesList[ptr - 1]
-                reqUrl = judges.url[site]
+                site = judgesList[ptr - 1]
+                reqUrl = url[site]
                 print("Enter Your " + site + " Handle: ", end="")
                 handle = str(input())
                 reqUrl += handle
                 print("Your " + site + " ratings : " +
-                      judges.obtainRatings(site, reqUrl))
+                      obtainRatings(site, reqUrl))
 
         except Exception as e:
             print("Wish you High Ratings!!")

@@ -1,6 +1,6 @@
-import codechef
-import codeforces
-import hackerearth
+from .codechef import obtainRating as ccfor
+from .codeforces import obtainRating as cfsor
+from .hackerearth import obtainRating as heor 
 
 judgesList = ['hackerearth', 'codechef', 'codeforces']
 
@@ -22,9 +22,9 @@ def obtainRatings(site, reqUrl):
 
     rating = "NA"
     if site == "codechef":
-        rating = codechef.obtainRating(reqUrl)
+        rating = ccfor(reqUrl)
     elif site == "codeforces":
-        rating = codeforces.obtainRating(reqUrl)
+        rating = cfsor(reqUrl)
     elif site == "hackerearth":
-        rating = hackerearth.obtainRating(reqUrl)
+        rating = heor(reqUrl)
     return rating

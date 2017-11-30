@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """Tests for `myratings` package."""
@@ -16,12 +16,15 @@ class TestMyratings(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures, if any."""
+        pass
 
     def tearDown(self):
         """Tear down test fixtures, if any."""
+        pass
 
     def test_000_something(self):
         """Test something."""
+        pass
 
     def test_command_line_interface(self):
         """Test the CLI."""

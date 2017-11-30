@@ -13,8 +13,8 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     'Click>=6.0',
-	'requests>=2.18.4'
-	'bs4>=4.6.0',
+	'requests>=2.18.4',
+	'bs4',
 ]
 
 setup_requirements = [
@@ -33,10 +33,10 @@ setup(
     author="Arun KG",
     author_email='kgarun50@gmail.com',
     url='https://github.com/kgarun/myratings',
-    packages=find_packages(include=['myratings']),
+    packages=['myratings',],
     entry_points={
         'console_scripts': [
-            'myratings=myratings.cli:main'
+            'myratings=myratings.myratings:main'
         ]
     },
     include_package_data=True,

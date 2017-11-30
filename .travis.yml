@@ -18,7 +18,7 @@ deploy:
       bk1qVi94UzBxbVpOaStLT3laeWFoKzZwcHBIS3k4TFZHVTJzYlBOOU92aldGZVpBRnErY09zWWQv
       SXlCeFREcXJwS2tHbUl0N1lETnk3Wk1iQ0dkKy9wUncyY1czdWtMUFZaODFaTDZMN1dTeDdtOWM9
   true:
-    python: 2.7
+    python: 3
     repo: kgarun/myratings
     tags: true
 install: pip install -U tox-travis
@@ -27,6 +27,4 @@ python:
 - 3.5
 - 3.4
 - 3.3
-- 2.7
-- 2.6
 script: tox

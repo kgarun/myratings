@@ -1,4 +1,4 @@
-import scrape
+from .scrape import *
 
 
 def obtainRating(url):
