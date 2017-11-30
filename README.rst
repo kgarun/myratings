@@ -28,7 +28,16 @@ Displays ratings of the user from various competitive programming sites in the t
 Features
 --------
 
-* TODO
+* Mode 1:
+        In this mode user handles and ratings are stored in the disk when user enters them 
+        for the first time so that the user need not enter them in the future and also it 
+        provides a comparison summary between old and new ratings.It is the default mode.
+
+
+* Mode 2:
+        If it is not possible to maintain log, users can still view their
+        ratings by simply selecting competitive programming site option number
+        and entering handle.
 
 Credits
 ---------
