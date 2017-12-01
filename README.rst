@@ -59,9 +59,19 @@ Usage
 * Then rating summary will be displayed
 
 
-To use myratings in a project::
+Configuration
+--------------
 
-* import myratings
+To configure type the following command::
+
+ myratings config
+
+To use myratings in a project : 
+-------------------------------
+
+ ::
+ 
+ import myratings
 
 
 
