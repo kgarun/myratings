@@ -27,7 +27,7 @@ test_requirements = [
 
 setup(
     name='myratings',
-    version='0.1.1',
+    version='1.0.0',
     description="Displays ratings of the user from various competitive programming sites in the terminal !!",
     long_description=readme + '\n\n' + history,
     author="Arun KG",
@@ -49,10 +49,11 @@ setup(
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
+		'Topic :: Terminals',
+		'Topic :: Competitive Programming',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.5',	
     ],
     test_suite='tests',
     tests_require=test_requirements,
