@@ -50,7 +50,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
 		'Topic :: Terminals',
-		'Topic :: Competitive Programming',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.5',	
