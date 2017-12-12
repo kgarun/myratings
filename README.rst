@@ -69,12 +69,9 @@ To configure type the following command::
 To use myratings in a project : 
 -------------------------------
 
- ::
+Simply type the following import statement::
  
  import myratings
-
-
-
 
 Credits
 ---------
