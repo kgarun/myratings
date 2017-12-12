@@ -15,6 +15,7 @@ requirements = [
     'Click>=6.0',
 	'requests>=2.18.4',
 	'bs4',
+    'texttable',
 ]
 
 setup_requirements = [
@@ -27,7 +28,7 @@ test_requirements = [
 
 setup(
     name='myratings',
-    version='1.0.0',
+    version='1.1.0',
     description="Displays ratings of the user from various competitive programming sites in the terminal !!",
     long_description=readme + '\n\n' + history,
     author="Arun KG",
@@ -43,10 +44,11 @@ setup(
     install_requires=requirements,
     license="MIT license",
     zip_safe=False,
-    keywords='myratings',
+    keywords='myratings competitive programming cp terminal rating ratings',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
+        'Intended Audience :: End Users/Desktop',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
 		'Topic :: Terminals',

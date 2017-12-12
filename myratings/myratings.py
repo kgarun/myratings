@@ -13,6 +13,7 @@ import os
 import errno
 import fileinput
 from .judges import *
+from texttable import Texttable
 
 
 def manageLog():
@@ -121,22 +122,36 @@ def printRatingSummary(ratings):
         rating =  a list of lists(site,oldrating,newrating)
     """
 
-    print("\n     Site       OldRating   NewRating  Changes")
+    summary = []
 
-    for rating in ratings:
-        site = rating[0]
-        oldRating = "NA"
-        newRating = "NA"
-        change = "NA"
+    if len(ratings) > 0:
+        table = Texttable()
+        headers=['Site', 'OldRating','NewRating','Changes']
+        summary.append(headers)
 
-        if rating[1] != "NA":
-            oldRating = int(rating[1])
-        if rating[2] != "NA":
-            newRating = int(rating[2])
-        if oldRating != "NA" and newRating != "NA":
-            change = newRating - oldRating
+        for rating in ratings:
+            sublist = []
+            site = rating[0]
+            oldRating = "NA"
+            newRating = "NA"
+            change = "NA"
 
-        print("{:^15} {:^10} {:^10} {:^10}".format(site, oldRating, newRating, change))
+            if rating[1] != "NA":
+                oldRating = int(rating[1])
+            if rating[2] != "NA":
+                newRating = int(rating[2])
+            if oldRating != "NA" and newRating != "NA":
+                change = newRating - oldRating
+
+            sublist.append(site)
+            sublist.append(oldRating)
+            sublist.append(newRating)
+            sublist.append(change)
+            summary.append(sublist)
+
+        table.add_rows(summary)
+        print(table.draw())
+        print()
 
 
 def onlineRatings():
@@ -182,6 +197,7 @@ def main():
             configure() # Calls method that configure user handle
         else:
             print("Usage:\n myratings (or) \n myratings config ")
+            os.sys.exit()
 
     if manageLog() is True:  # Mode 1
         ratings = getRatings()
@@ -193,3 +209,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
