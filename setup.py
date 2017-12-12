@@ -45,6 +45,7 @@ setup(
     license="MIT license",
     zip_safe=False,
     keywords='myratings competitive programming cp terminal rating ratings',
+	python_requires='>=3',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
