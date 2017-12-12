@@ -50,7 +50,7 @@ Type the following command in the terminal::
 Usage
 -----
 
-.. image:: https://user-images.githubusercontent.com/21175650/33433330-1523cdf8-d5d3-11e7-865d-8bb9526cfa0b.png
+.. image:: https://user-images.githubusercontent.com/21175650/33887427-a1af9780-df41-11e7-8fbb-b44b6fbd3419.png
      :alt: Demo
 
 
