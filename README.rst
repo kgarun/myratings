@@ -50,19 +50,26 @@ Type the following command in the terminal::
 Usage
 -----
 
-.. image:: https://user-images.githubusercontent.com/21175650/33887427-a1af9780-df41-11e7-8fbb-b44b6fbd3419.png
-     :alt: Demo
-
 
 * Type "myratings" from the commandline
-* First time it asks for user handle of the respective sites
-* Then rating summary will be displayed
+
+For the first time users are supposed to enter their respective handles,
+
+.. image:: https://user-images.githubusercontent.com/21175650/33887427-a1af9780-df41-11e7-8fbb-b44b6fbd3419.png
+     :alt: Demo1
+
+
+On subsequent usage output will resemble the following :
+
+.. image:: https://user-images.githubusercontent.com/21175650/33887437-a69a8ffc-df41-11e7-9ac3-6fecc0483c40.png
+     :alt: Demo2
+
 
 
 Configuration
 --------------
 
-To configure type the following command::
+To add or update handle type the following command::
 
  myratings config
 
