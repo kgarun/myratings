@@ -28,3 +28,6 @@ python:
 - 3.4
 - 3.3
 script: tox
+sudo: required
+dist: trusty
+group: deprecated-2017Q4
