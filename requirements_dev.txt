@@ -26,7 +26,6 @@ lxml==4.1.1
 MarkupSafe==1.0
 mccabe==0.6.1
 pathtools==0.1.2
-pkg-resources==0.0.0
 pkginfo==1.4.1
 pluggy==0.6.0
 poyo==0.4.1

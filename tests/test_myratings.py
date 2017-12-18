@@ -43,23 +43,7 @@ class TestMyratings(unittest.TestCase):
     def test_hackerearth_on_improper_input(self):
         """Tests hackerearth's obtainRating method behaviour on proper input."""        
         self.assertTrue(heor("https://www.hackerearth.com/@kgarundfghjklcvghj66650") == "NA")
-    
-    def test_hackerrank_on_improper_input(self):
-        """Tests hackerrank's obtainRating method behaviour on improper input.""" 
-        self.assertTrue(hror("https://www.hackerrank.com/kgarundgdhhhhh50") == "NA")
-
-    def test_hackerrank_on_proper_input(self):
-        """Tests hackerrank's obtainRating method behaviour on proper input."""        
-        self.assertTrue(hror("https://www.hackerrank.com/kgarun") != "NA")
-    
-    def test_topcoder_on_improper_input(self):
-        """Tests Topcoder's obtainRating method behaviour on improper input.""" 
-        self.assertTrue(tcor("https://www.topcoder.com/members/kgarufghjklnxcghjmk9950/") == "NA")
-
-    def test_topcoder_on_proper_input(self):
-        """Tests hackerearth's obtainRating method behaviour on proper input."""        
-        self.assertTrue(tcor("https://www.topcoder.com/members/kgarun50/") != "NA")
-    
+      
 
     def test_command_line_interface(self):
         """Test the CLI."""
