@@ -17,13 +17,14 @@ def obtainRating(url):
         userRatingInfo = soup.findAll("span", {"class": re.compile("^user-")})
         for info in userRatingInfo:
             try:
-                rating = int(info.text)
+                rating = float(info.text)
                 break
             except ValueError:
                 continue
         if rating == "NA":
             raise Exception("Rating not Found!!")
-        return str(rating)
+        roundedRating = round(float(rating))
+        return roundedRating
     except Exception as e:
         #print("Cannot Obtain Ratings From CodeForces")
         #print("Reason :" + str(e))

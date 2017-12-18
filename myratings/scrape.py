@@ -1,4 +1,4 @@
-import requests
+import dryscrape
 from bs4 import BeautifulSoup
 
 
@@ -10,17 +10,10 @@ def getSoup(url):
         BeatifulSoup object of the given URL
     """
     try:
-        r = requests.get(
-            url,
-            headers={
-                "referer":
-                url,
-                'User-Agent':
-                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) \
-                 AppleWebKit/537.36 (KHTML, like Gecko) \
-                 Chrome/39.0.2171.95 Safari/537.36'
-            })
-        soup = BeautifulSoup(r.content, 'html.parser')
+        session = dryscrape.Session()
+        session.visit(url)
+        response = session.body()
+        soup = BeautifulSoup(response, "lxml")
         return soup
     except Exception as e:
         print(str(e))

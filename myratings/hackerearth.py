@@ -14,9 +14,10 @@ def obtainRating(url):
     try:
         ratingDiv = soup.findAll("span", {"class": "track-following-num"})
         rating = ratingDiv[1].text
+        roundedRating = round(float(rating))
         if rating == "NA":
             raise Exception("Rating not Found!!")
-        return rating
+        return roundedRating
     except Exception as e:
         #print("Cannot Obtain Ratings From Hackerearth")
         #print("Reason :" + str(e))

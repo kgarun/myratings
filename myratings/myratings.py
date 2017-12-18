@@ -16,6 +16,8 @@ from .judges import *
 from texttable import Texttable
 
 
+printedUsageInfo = False #Flag variable 
+
 def manageLog():
     """ Manages the handle folder (for persistence data where the id of the
     user in various Competitive Programming site is stored.
@@ -112,6 +114,8 @@ def getRatings():
             print("   ==> "+errhandle)        
 
         print("\nUse following command to config handle:\n myratings config\n\n")
+        global printedUsageInfo 
+        printedUsageInfo = True
 
     return rating
 
@@ -152,6 +156,14 @@ def printRatingSummary(ratings):
         table.add_rows(summary)
         print(table.draw())
         print()
+
+
+
+    else:
+        global printedUsageInfo
+        if printedUsageInfo is False:
+            print("\nUse following command to config handle:\n myratings config\n\n")
+
 
 
 def onlineRatings():
