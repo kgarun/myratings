@@ -13,9 +13,9 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     'Click>=6.0',
-	'requests>=2.18.4',
 	'bs4',
     'texttable',
+    'dryscrape>=1.0',
 ]
 
 setup_requirements = [
@@ -28,7 +28,7 @@ test_requirements = [
 
 setup(
     name='myratings',
-    version='1.1.2',
+    version='1.2.2',
     description="Displays ratings of the user from various competitive programming sites in the terminal !!",
     long_description=readme + '\n\n' + history,
     author="Arun KG",
