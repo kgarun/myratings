@@ -1,6 +1,7 @@
 import dryscrape
 from bs4 import BeautifulSoup
 
+session = dryscrape.Session()
 
 def getSoup(url):
     """Returns BeatifulSoup object of the given URL.
@@ -10,9 +11,9 @@ def getSoup(url):
         BeatifulSoup object of the given URL
     """
     try:
-        session = dryscrape.Session()
         session.visit(url)
         response = session.body()
+        session.reset()
         soup = BeautifulSoup(response, "lxml")
         return soup
     except Exception as e:

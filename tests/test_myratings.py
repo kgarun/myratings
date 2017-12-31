@@ -12,7 +12,6 @@ from myratings import cli
 from myratings.codechef import obtainRating as ccor
 from myratings.codeforces import obtainRating as cfor
 from myratings.hackerearth import obtainRating as heor
-from myratings.hackerrank import obtainRating as hror
 from myratings.topcoder import obtainRating as tcor
 
 
@@ -31,7 +30,7 @@ class TestMyratings(unittest.TestCase):
     def test_codeforces_on_proper_input(self):
         """Tests codeforces's obtainRating method behaviour on proper input."""        
         self.assertTrue(cfor("http://www.codeforces.com/profile/kgarun50") != "NA")
-    
+
     def test_codeforces_on_improper_input(self):
          """Tests codeforces's obtainRating method behaviour on improper input."""
          self.assertTrue(cfor("http://www.codeforces.com/profile/kgarunaffgwgs50") == "NA")
@@ -43,8 +42,15 @@ class TestMyratings(unittest.TestCase):
     def test_hackerearth_on_improper_input(self):
         """Tests hackerearth's obtainRating method behaviour on proper input."""        
         self.assertTrue(heor("https://www.hackerearth.com/@kgarundfghjklcvghj66650") == "NA")
-      
 
+    def test_topcoder_on_proper_input(self):
+        """Tests topcoder's obtainRating method behaviour on proper input."""
+        self.assertNotEqual(tcor("https://www.topcoder.com/members/kgarun50") , "NA")
+    
+    def test_topcoder_on_improper_input(self):
+        """Tests topcoder's obtainRating method behaviour on improper input."""
+        self.assertEqual(tcor("https://www.topcoder.com/members/kgaruooqnooqgoqgnoo8877n50"), "NA")
+    
     def test_command_line_interface(self):
         """Test the CLI."""
         runner = CliRunner()

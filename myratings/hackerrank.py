@@ -13,13 +13,14 @@ def obtainRating(url):
     rating = "NA"
 
     try:
-        ratingDiv = soup.find("span", {"id": "hacker-contest-score"})
+        ratingDiv = soup.findAll("span", {"class": "txt-navy"})
+        print(ratingDiv)
         rating = ratingDiv.text
         roundedRating = round(float(rating))
         if rating == "NA":
             raise Exception("Rating not Found!!")
         return roundedRating
     except Exception as e:
-        #print("Cannot Obtain Ratings From Hackerrank")
-        #print("Reason :" + str(e))
+        print("Cannot Obtain Ratings From Hackerrank")
+        print("Reason :" + str(e))
         return rating
