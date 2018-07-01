@@ -47,7 +47,7 @@ sphinxcontrib-websupport==1.1.0
 tabulate==0.8.2
 texttable==1.4.0
 tox==3.0.0
-tqdm==4.19.5
+tqdm==4.23.4
 twine==1.9.1
 urllib3==1.22
 virtualenv==15.1.0
