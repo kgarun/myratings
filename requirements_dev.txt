@@ -19,7 +19,7 @@ dryscrape==1.0
 flake8==3.6.0
 future==0.17.1
 idna==2.7
-imagesize==1.0.0
+imagesize==1.1.0
 Jinja2==2.10
 jinja2-time==0.2.0
 lxml==4.2.4
