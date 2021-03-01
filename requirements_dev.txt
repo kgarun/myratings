@@ -34,7 +34,7 @@ pyasn1==0.4.8
 pycodestyle==2.6.0
 pycparser==2.20
 pyflakes==2.2.0
-Pygments==2.2.0
+Pygments==2.8.0
 python-dateutil==2.7.5
 pytz==2018.7
 PyYAML==3.13
