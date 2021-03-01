@@ -1,6 +1,6 @@
 alabaster==0.7.12
 argh==0.26.2
-arrow==0.12.1
+arrow==1.0.2
 asn1crypto==0.24.0
 Babel==2.6.0
 beautifulsoup4==4.6.3
