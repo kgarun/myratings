@@ -18,7 +18,7 @@ docutils==0.16
 dryscrape==1.0
 flake8==3.8.4
 future==0.18.2
-idna==2.7
+idna==3.1
 imagesize==1.1.0
 Jinja2==2.10
 jinja2-time==0.2.0
