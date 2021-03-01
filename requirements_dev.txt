@@ -20,7 +20,7 @@ flake8==3.8.4
 future==0.18.2
 idna==3.1
 imagesize==1.2.0
-Jinja2==2.10
+Jinja2==2.11.3
 jinja2-time==0.2.0
 lxml==4.2.5
 MarkupSafe==1.0
