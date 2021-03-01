@@ -17,7 +17,7 @@ cryptography==3.4.6
 docutils==0.16
 dryscrape==1.0
 flake8==3.8.4
-future==0.17.1
+future==0.18.2
 idna==2.7
 imagesize==1.1.0
 Jinja2==2.10
